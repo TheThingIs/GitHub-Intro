@@ -44,7 +44,7 @@ public class main extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		// Ändra siffran här nere till 1,2,3 eller 4 beroende på vilken vy du vill se!
-		makeView3();
+		makeView2();
 
 		primaryStage.setScene(new Scene(root, WIDTH, HEIGHT,Color.SKYBLUE));
 		primaryStage.show();
@@ -98,7 +98,26 @@ public class main extends Application {
 		 * 
 		 * 		 TIPS: Börja i mitten och gå snett uppåt.
 		 */
-		
+		int rings = 100;
+
+		for (int i = rings; i >= 0; i--) {
+
+			double radius = WIDTH / rings / 2;
+
+			Circle cir = new Circle(i * radius);
+
+			int r = (int) (Math.random() * 255);
+			int g = (int) (Math.random() * 255);
+			int b = (int) (Math.random() * 255);
+			cir.setFill(Color.rgb(r, g, b));
+			
+			cir.setTranslateX(300);
+			cir.setTranslateY(300);
+
+			root.getChildren().add(cir);
+
+		}
+
 		
 	}
 
