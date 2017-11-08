@@ -111,8 +111,8 @@ public class main extends Application {
 			int b = (int) (Math.random() * 255);
 			cir.setFill(Color.rgb(r, g, b));
 			
-			cir.setTranslateX(300);
-			cir.setTranslateY(300);
+			cir.setTranslateX(i*3);
+			cir.setTranslateY(i*3);
 
 			root.getChildren().add(cir);
 
