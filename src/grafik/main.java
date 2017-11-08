@@ -138,8 +138,8 @@ public class main extends Application {
 		
 		
 
-		int rows = 10;
-		int cols = 10;
+		int rows = 8;
+		int cols = 8;
 
 		double width = WIDTH / cols;
 		double height = HEIGHT / rows;
@@ -149,13 +149,13 @@ public class main extends Application {
 			for (int col = 0; col < cols; col++) {
 
 				// Skapa en ny Rectangle
-				Circle rect = new Circle(30); //ändrade till cirkel
+				Circle rect = new Circle(37.5); //ändrade till cirkel
 
 				// Flytta rect i x-led så den kommer rätt
-				rect.setTranslateX(col * width+30);
+				rect.setTranslateX(col * width+37.5);
 
 				// Flytta rect i y-led så den kommer rätt
-				rect.setTranslateY(row * height+30); //flyttar allt 30 steg så att circlarna inte hamnar i hörnet
+				rect.setTranslateY(row * height+37.5); //flyttar allt 30 steg så att circlarna inte hamnar i hörnet
 
 				// Färglägg med en random färg
 				int r = (int) (Math.random() * 255);
